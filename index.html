@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flamengo: Museu da Glória Eterna</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav aria-label="Principal"><b>MENGÃO</b>
+<a href="#inicio">Início</a><a href="#historia">História</a><a href="#escalacoes">Escalações</a><a href="#stats">Estatísticas</a><a href="#graficos">Gráficos</a><a href="#linha">Linha do tempo</a><a href="#galeria">Galeria</a></nav>
+
+<header id="inicio" class="hero">
+<div>
+<h1>Flamengo<span>Museu da Glória Eterna</span></h1>
+<p>Quatro noites, quatro finais, quatro estrelas continentais. Entre no museu e reviva as conquistas da Copa Libertadores: 1981, 2019, 2022 e 2025.</p>
+<div class="cups" id="cups"></div>
+</div>
+</header>
+
+<section id="historia">
+<h2>História das campanhas</h2>
+<p class="sub">Escolha uma edição para ver a final, o caminho até ela e os momentos decisivos.</p>
+<div class="tabs" role="tablist" id="tabsHist"></div>
+<div id="hist"></div>
+</section>
+
+<section id="escalacoes">
+<h2>Escalações</h2>
+<p class="sub">Time titular da final, formação tática e camisas.</p>
+<div class="tabs" role="tablist" id="tabsEsc"></div>
+<div id="esc"></div>
+</section>
+
+<section id="stats">
+<h2>Estatísticas individuais</h2>
+<p class="sub">Pesquise, filtre e ordene (clique no título da coluna). O símbolo "—" indica dado não preenchido: complete no array <code>PLAYERS</code> do código.</p>
+<div class="tools">
+<input id="q" type="search" placeholder="Buscar jogador" aria-label="Buscar jogador">
+<select id="fe" aria-label="Filtrar por edição"><option value="">Todas as edições</option></select>
+<select id="fp" aria-label="Filtrar por posição"><option value="">Todas as posições</option><option>Goleiro</option><option>Defensor</option><option>Meio-campista</option><option>Atacante</option></select>
+</div>
+<div class="wrap"><table>
+<thead><tr><th data-k="name">Jogador</th><th data-k="year">Edição</th><th data-k="pos">Posição</th><th data-k="num">Camisa</th><th data-k="games">Jogos</th><th data-k="goals">Gols</th><th data-k="assists">Assist.</th><th data-k="mins">Minutos</th></tr></thead>
+<tbody id="tb"></tbody></table></div>
+<p class="note" id="cnt"></p>
+</section>
+
+<section id="graficos">
+<h2>Comparativo entre campanhas</h2>
+<p class="sub">Escolha a métrica. Valores ausentes aparecem como "—".</p>
+<div class="tabs" id="tabsChart"></div>
+<div class="card"><div class="bars" id="bars"></div></div>
+</section>
+
+<section id="linha">
+<h2>Linha do tempo</h2>
+<div class="tl" id="tl"></div>
+</section>
+
+<section id="galeria">
+<h2>Galeria histórica</h2>
+<p class="sub">Toque em um card para abrir. Para usar fotos reais, preencha o campo <code>img</code> em <code>GALLERY</code> com a URL de uma imagem sua (as fotos oficiais têm direitos autorais, por isso não vêm incluídas).</p>
+<div class="gal" id="gal"></div>
+</section>
+
+<dialog id="dlg"><h3 id="dt" style="color:var(--gold)"></h3><p id="dd"></p><form method="dialog"><button>Fechar</button></form></dialog>
+<footer>Flamengo: Museu da Glória Eterna. Projeto de fã, sem vínculo oficial com o clube. Confira os dados em fontes oficiais (CONMEBOL, CBF, Flamengo).</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
